@@ -61,9 +61,9 @@ public class Panel extends SurfaceView implements Callback {
 	@Override
 	public void onDraw(Canvas canvas) {
 
-		paint.setARGB(255, 255, 0, 0);
+		paint.setARGB(255, 255, 255, 255);
 		//canvas.drawColor(Color.BLACK);
-		canvas.drawCircle(200f, 200f, 30, paint);
+		canvas.drawCircle(200f, 200f, 20, paint);
 	}
 
 }
