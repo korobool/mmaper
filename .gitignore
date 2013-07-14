@@ -7,6 +7,7 @@
 
 # Java class files
 *.class
+*.jar
 
 # generated files
 bin/
@@ -18,3 +19,4 @@ local.properties
 # Eclipse project files
 .classpath
 .project
+.metadata
