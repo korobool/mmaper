@@ -28,8 +28,8 @@ public class MainActivity extends Activity {
     {
         x = e.getX();
         y = e.getY();
-        GetterSetter.LastX = x;
-        GetterSetter.LastY = y;
+        GetterSetter.LastX = x - 10;
+        GetterSetter.LastY = y - 100;
         return true;
     }
 
