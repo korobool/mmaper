@@ -7,6 +7,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 
 public class MainActivity extends Activity {
@@ -27,7 +28,8 @@ public class MainActivity extends Activity {
     {
         x = e.getX();
         y = e.getY();
-      
+        GetterSetter.LastX = x;
+        GetterSetter.LastY = y;
         return true;
     }
 
@@ -38,5 +40,30 @@ public class MainActivity extends Activity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.plus:
+                addNew();
+                return true;
+            case R.id.undo:
+                clearAll();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+	private void clearAll() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void addNew() {
+		// TODO Auto-generated method stub
+		
+	}
     
 }

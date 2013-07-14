@@ -8,5 +8,4 @@
           android:icon="@drawable/undo"
           android:title="@string/undo"
           android:showAsAction="ifRoom"/>
-
 </menu>
