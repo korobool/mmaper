@@ -63,7 +63,7 @@ public class Panel extends SurfaceView implements Callback {
 
 		paint.setARGB(255, 255, 255, 255);
 		//canvas.drawColor(Color.BLACK);
-		canvas.drawCircle(200f, 200f, 20, paint);
+		canvas.drawCircle(GetterSetter.LastX, GetterSetter.LastY, 20, paint);
 	}
 
 }
