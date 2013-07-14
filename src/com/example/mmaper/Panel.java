@@ -2,6 +2,7 @@ package com.example.mmaper;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.SurfaceHolder;
@@ -60,10 +61,15 @@ public class Panel extends SurfaceView implements Callback {
 	
 	@Override
 	public void onDraw(Canvas canvas) {
-
+		clearCanvas(canvas);
 		paint.setARGB(255, 255, 255, 255);
 		//canvas.drawColor(Color.BLACK);
 		canvas.drawCircle(GetterSetter.LastX, GetterSetter.LastY, 20, paint);
+	}
+
+	private void clearCanvas(Canvas canvas) {
+		canvas.drawColor(Color.BLACK);
+		
 	}
 
 }
