@@ -1,1 +1,17 @@
-<mmap><topic x="10" y="75" shape="ellipse" text="Hello"><topic x="50" y="50" shape="rectangle" text="Whore"></topic><topic x="50" y="100" shape="rhomb" text="Guy"><topic x="150" y="175" shape="rectangle" text="Lakers"><topic x="230" y="145" shape="rhomb" text="Fucking"></topic><topic x="245" y="245" shape="rhomb" text="Fucking"></topic></topic><topic x="150" y="75" shape="rectangle" text="Ok"></topic><topic x="150" y="125" shape="rhomb" text="Fuck off"></topic></topic></topic><topic x="10" y="200" shape="rectangle" text="Bye"><topic x="50" y="200" shape="rhomb" text="Fucking"></topic><topic x="50" y="250" shape="rhomb" text="Sky"></topic></topic></mmap>
+<mmap>
+  <topic x="10" y="75" shape="ellipse" text="Hello">
+    <topic x="50" y="50" shape="rectangle" text="Whore"/>
+    <topic x="50" y="100" shape="rhomb" text="Guy">
+      <topic x="150" y="175" shape="rectangle" text="Lakers">
+        <topic x="230" y="145" shape="rhomb" text="Fucking"/>
+        <topic x="245" y="245" shape="rhomb" text="Fucking"/>
+      </topic>
+      <topic x="150" y="75" shape="rectangle" text="Ok"/>
+      <topic x="150" y="125" shape="rhomb" text="Fuck off"/>
+    </topic>
+  </topic>
+  <topic x="10" y="200" shape="rectangle" text="Bye">
+    <topic x="50" y="200" shape="rhomb" text="Fucking"/>
+    <topic x="50" y="250" shape="rhomb" text="Sky"/>
+  </topic>
+</mmap>
