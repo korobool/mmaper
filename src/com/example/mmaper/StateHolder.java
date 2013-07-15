@@ -7,5 +7,7 @@ public class StateHolder {
 	
 	public static Mmodel mmodel = new Mmodel();
 	public static boolean UpdateRequired = true;
+	
+	public static Object uiSynch = new Object();
 
 }

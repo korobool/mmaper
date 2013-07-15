@@ -23,8 +23,6 @@ public class CanvasThread extends Thread {
     @SuppressLint("WrongCall")
 	@Override
     public void run() {
-        if (!StateHolder.UpdateRequired)
-        	return;
     	Canvas c;
         while (_run) {
             c = null;
@@ -33,7 +31,9 @@ public class CanvasThread extends Thread {
                if (c != null)
                {
                 synchronized (_surfaceHolder) {
-                    _panel.onDraw(c);
+                	synchronized(StateHolder.uiSynch) {
+                		_panel.onDraw(c);
+                	}
                 
                 }
                }

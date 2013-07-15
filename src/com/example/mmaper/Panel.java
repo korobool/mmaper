@@ -63,9 +63,14 @@ public class Panel extends SurfaceView implements Callback {
 	
 	@Override
 	public void onDraw(Canvas canvas) {
+		if (!StateHolder.UpdateRequired)
+        	return;
+		
 		clearCanvas(canvas);
-	
-		mvisual.draw(canvas);
+        	
+        mvisual.draw(canvas);
+		
+		StateHolder.UpdateRequired = false;
 		
 	}
 
