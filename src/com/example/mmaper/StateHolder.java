@@ -4,10 +4,10 @@ public class StateHolder {
 
 	public static float LastX = 200f;
 	public static float LastY = 300f;
-	
+
 	public static Mmodel mmodel = new Mmodel();
 	public static boolean UpdateRequired = true;
-	
+
 	public static Object uiSynch = new Object();
 
 }

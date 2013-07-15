@@ -10,21 +10,21 @@ import android.view.SurfaceHolder.Callback;
 import android.view.SurfaceView;
 
 public class Panel extends SurfaceView implements Callback {
-	
+
 	private CanvasThread canvasthread;
 	public Paint paint;
-	
+
 	private Mvisual mvisual = new Mvisual(StateHolder.mmodel);
-	
+
 	public Panel(Context context, AttributeSet attrs) {
-			super(context, attrs); 
-			// TODO Auto-generated constructor stub
-		    getHolder().addCallback(this);
-		    canvasthread = new CanvasThread(getHolder(), this);
-		    setFocusable(true);
-		 paint = new Paint();
-		}
-	
+		super(context, attrs);
+		// TODO Auto-generated constructor stub
+		getHolder().addCallback(this);
+		canvasthread = new CanvasThread(getHolder(), this);
+		setFocusable(true);
+		paint = new Paint();
+	}
+
 	public Panel(Context context) {
 		super(context);
 		// TODO Auto-generated constructor stub
@@ -41,7 +41,7 @@ public class Panel extends SurfaceView implements Callback {
 		// TODO Auto-generated method stub
 		canvasthread = new CanvasThread(getHolder(), this);
 		canvasthread.setRunning(true);
-	    canvasthread.start();
+		canvasthread.start();
 
 	}
 
@@ -60,23 +60,23 @@ public class Panel extends SurfaceView implements Callback {
 		}
 
 	}
-	
+
 	@Override
 	public void onDraw(Canvas canvas) {
 		if (!StateHolder.UpdateRequired)
-        	return;
-		
+			return;
+
 		clearCanvas(canvas);
-        	
-        mvisual.draw(canvas);
-		
+
+		mvisual.draw(canvas);
+
 		StateHolder.UpdateRequired = false;
-		
+
 	}
 
 	private void clearCanvas(Canvas canvas) {
 		canvas.drawColor(Color.BLACK);
-		
+
 	}
 
 }
