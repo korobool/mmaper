@@ -23,7 +23,9 @@ public class CanvasThread extends Thread {
     @SuppressLint("WrongCall")
 	@Override
     public void run() {
-        Canvas c;
+        if (!StateHolder.UpdateRequired)
+        	return;
+    	Canvas c;
         while (_run) {
             c = null;
             try {
