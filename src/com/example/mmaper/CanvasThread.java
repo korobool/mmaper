@@ -27,7 +27,7 @@ public class CanvasThread extends Thread {
         while (_run) {
             c = null;
             try {
-                c = _surfaceHolder.lockCanvas(null);
+               c = _surfaceHolder.lockCanvas(null);
                if (c != null)
                {
                 synchronized (_surfaceHolder) {

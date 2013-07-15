@@ -2,10 +2,6 @@ package com.example.mmaper;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -19,8 +15,6 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // Bitmap b = Bitmap.createBitmap(100, 100, Bitmap.Config.ARGB_8888);
-        // Canvas c = new Canvas(b);
     }
     
     @Override
@@ -28,8 +22,9 @@ public class MainActivity extends Activity {
     {
         x = e.getX();
         y = e.getY();
-        GetterSetter.LastX = x - 10;
-        GetterSetter.LastY = y - 100;
+        
+        StateHolder.LastX = x - 10; // TODO: Learn how to compensate properly
+        StateHolder.LastY = y - 100; // TODO: Learn how to compensate properly
         return true;
     }
 
@@ -62,7 +57,7 @@ public class MainActivity extends Activity {
 	}
 
 	private void addNew() {
-		// TODO Auto-generated method stub
+		StateHolder.mmodel.LoadFrom("test_mmap.xml");
 		
 	}
     

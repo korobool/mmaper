@@ -14,7 +14,9 @@ public class Panel extends SurfaceView implements Callback {
 	private CanvasThread canvasthread;
 	public Paint paint;
 	
-	 public Panel(Context context, AttributeSet attrs) {
+	private Mvisual mvisual = new Mvisual(StateHolder.mmodel);
+	
+	public Panel(Context context, AttributeSet attrs) {
 			super(context, attrs); 
 			// TODO Auto-generated constructor stub
 		    getHolder().addCallback(this);
@@ -62,9 +64,9 @@ public class Panel extends SurfaceView implements Callback {
 	@Override
 	public void onDraw(Canvas canvas) {
 		clearCanvas(canvas);
-		paint.setARGB(255, 255, 255, 255);
-		//canvas.drawColor(Color.BLACK);
-		canvas.drawCircle(GetterSetter.LastX, GetterSetter.LastY, 20, paint);
+	
+		mvisual.draw(canvas);
+		
 	}
 
 	private void clearCanvas(Canvas canvas) {
